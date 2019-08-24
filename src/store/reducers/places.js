@@ -4,7 +4,7 @@ import {
   SELECT_PLACE,
   DESELECT_PLACE
 } from "../actions/actionTypes";
-import Image from '../../assets/beautiful-place.jpg'
+import Image from "../../assets/beautiful-place.jpg";
 const initialState = {
   places: [],
   selectedPlace: null
@@ -24,7 +24,7 @@ const reducer = (state = initialState, action) => {
     case DELETE_PLACE:
       return {
         ...state,
-        places: state.places.filter(place => {
+        places: state.places.filter((place) => {
           return place.key !== state.selectedPlace.key;
         }),
         selectedPlace: null
@@ -32,7 +32,7 @@ const reducer = (state = initialState, action) => {
     case SELECT_PLACE:
       return {
         ...state,
-        selectedPlace: state.places.find(place => {
+        selectedPlace: state.places.find((place) => {
           return place.key === action.placeKey;
         })
       };

@@ -1,14 +1,16 @@
 import React, { Component } from "react";
 import { StyleSheet } from "react-native";
-import DefaultInput from '../Ui/DefaultInput';
+import DefaultInput from "../Ui/DefaultInput";
 
-const  PlaceInput = props=> {
+const PlaceInput = (props) => {
   return (
-      <DefaultInput placeholder='place Name' 
-      value={props.placeName} 
-      onChangeText={props.onChangeText}  />
-  )
-}
+    <DefaultInput
+      placeholder="place Name"
+      value={props.placeName}
+      onChangeText={props.onChangeText}
+    />
+  );
+};
 
 const styles = StyleSheet.create({
   inputContainer: {
