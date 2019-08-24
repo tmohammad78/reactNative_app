@@ -36,7 +36,7 @@ const DashboardTabNavigator = createBottomTabNavigator(
       navigationOptions: {
         tabBarIcon: ({}) => {
           let IconComponent = Icon;
-          return <IconComponent  name={Platform.OS === 'android' ? 'md-share-alt' : 'ios-share' } size={30} color={"red"} />;
+          return <IconComponent  name={Platform.OS === 'android' ? 'md-share-alt' : 'ios-share' } size={30} color={"orange"} />;
         }
       }
     },
@@ -44,8 +44,7 @@ const DashboardTabNavigator = createBottomTabNavigator(
       screen: FindPlace,
       navigationOptions: {
         tabBarIcon: ({}) => {
-          let IconComponent = Icon;
-          return <Icon name={Platform.OS === 'android' ? 'md-map' : 'ios-map' } size={30} color={"red"} />;
+          return <Icon name={Platform.OS === 'android' ? 'md-map' : 'ios-map' } size={30} color={"orange"} />;
         }
       }
     }
@@ -57,6 +56,10 @@ const DashboardTabNavigator = createBottomTabNavigator(
         headerTitle: routeName
       };
     }
+  },{
+    // tabBarOptions: {
+    //   activeTintColor: 'oranged'
+    // }
   }
 );
 const DashboardStackNavigator = createStackNavigator(
@@ -71,6 +74,7 @@ const DashboardStackNavigator = createStackNavigator(
             style={{ paddingLeft: 10 }}
             onPress={() => navigation.openDrawer()}
             name={Platform.OS === 'android' ? 'md-menu' : 'ios-menu' }
+            color='orange'
             size={30}
           />
         )
